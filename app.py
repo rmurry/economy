@@ -5,7 +5,7 @@ import yfinance as yf
 import pandas as pd
 import altair as alt
 
-st.set_page_config(page_title="Stonks")
+st.set_page_config(page_title="Stonks",layout="wide",initial_sidebar_state="expanded")
 
 
 with st.sidebar:
