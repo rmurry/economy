@@ -30,7 +30,7 @@ trend = alt.Chart(dat).mark_line().encode(
     tooltip = ['Date','Close']
 ).properties(title="Stock Trend")
 
-with st.container:
+with st.container():
     st.altair_chart(trend,use_container_width=True)
 
 
