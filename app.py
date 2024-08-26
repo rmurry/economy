@@ -30,7 +30,12 @@ trend = alt.Chart(dat).mark_line().encode(
     tooltip = ['Date','Close']
 ).properties(title="Stock Trend")
 
-with st.container():
+col = st.columns((1,4),gap='medium')
+
+with col[0]:
+    st.metric(symbol,"100","4")
+
+with col[1]:
     st.altair_chart(trend,use_container_width=True)
 
 
