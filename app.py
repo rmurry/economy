@@ -24,15 +24,14 @@ def get_data(symbol,start_date,end_date):
 
 dat = get_data(symbol,start_date,end_date)
 
-#dat = get_data("AAPL","2024-01-01","2024-05-01")
-#dat.head()
-
 trend = alt.Chart(dat).mark_line().encode(
     x = 'Date',
     y = 'Close',
     tooltip = ['Date','Close']
 ).properties(title="Stock Trend")
-st.altair_chart(trend,use_container_width=True)
+
+with st.container:
+    st.altair_chart(trend,use_container_width=True)
 
 
 
