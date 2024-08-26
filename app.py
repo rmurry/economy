@@ -29,7 +29,8 @@ dat = get_data(symbol,start_date,end_date)
 
 trend = alt.Chart(dat).mark_line().encode(
     x = 'Date',
-    y = 'Close'
+    y = 'Close',
+    tooltip = ['Date','Close']
 ).properties(title="Stock Trend")
 st.altair_chart(trend,use_container_width=True)
 
