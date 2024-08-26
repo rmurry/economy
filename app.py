@@ -1,9 +1,7 @@
 import streamlit as st
-from streamlit_date_picker import date_range_picker
 from datetime import date
 from datetime import timedelta
 import yfinance as yf
-import easychart
 import pandas as pd
 import altair as alt
 
