@@ -7,7 +7,6 @@ import altair as alt
 
 st.set_page_config(page_title="Stonks",layout="wide",initial_sidebar_state="expanded")
 
-
 with st.sidebar:
     st.title("Stock Puller")
 
@@ -28,8 +27,10 @@ trend = alt.Chart(dat).mark_line().encode(
     x = 'Date',
     y = 'Close',
     tooltip = ['Date','Close']
-).properties(title="Stock Trend")
+).properties(title="Stock Trend").interactive()
 
+
+### Dashboard Layout
 col = st.columns((1,4),gap='medium')
 
 with col[0]:
